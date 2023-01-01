@@ -20,7 +20,7 @@ export class UsersService {
     return 'This action adds a new user';
   }
 
-  findOne(id: number) {
+  findOne(id: number): Promise<Users> {
     return this.usersRepository.findOne({ id });
   }
 
