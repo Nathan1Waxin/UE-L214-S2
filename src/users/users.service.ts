@@ -1,23 +1,23 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { Users } from './entities/user.entity';
+import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
-  constructor(
+  constructor{
     @InjectRepository(Users)
     private usersRepository: Repository<Users>
-) { }
+  } {}
+    
+  create(createUserDto: CreateUserDto) {
+    return 'This action adds a new user';
+  }
 
   findAll() {
     return this.usersRepository.find();
-  }
-
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
   }
 
   findOne(id: number) {
@@ -31,5 +31,4 @@ export class UsersService {
   remove(id: number) {
     return `This action removes a #${id} user`;
   }
-
 }

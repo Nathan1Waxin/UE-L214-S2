@@ -1,10 +1,6 @@
 # compiled output
 /dist
 /node_modules
-/coverage
-/.scannerwork
-.scannerwork/*
-sonar-test-report.xml
 
 # Logs
 logs
@@ -17,7 +13,6 @@ lerna-debug.log*
 
 # OS
 .DS_Store
-.env
 
 # Tests
 /coverage

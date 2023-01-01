@@ -2,20 +2,20 @@ import { Entity, Column, PrimaryGeneratedColumn, EntityRepository, Repository } 
 
 @Entity()
 export class Users {
-  @PrimaryGeneratedColumn()
-  id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
-  @Column()
-  firstname: string;
+    @Column()
+    firstname: string;
 
-  @Column()
-  lastname: string;
+    @Column()
+    lastname: string;
 
-  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
-  createdAt: Date;
+    @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
+    createdAt: Date;
 
-  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
-  updatedAt: Date;
+    @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP"})
+    updateAt: Date;
 }
 
 @EntityRepository(Users)
