@@ -21,7 +21,7 @@ export class UsersService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    return this.usersRepository.findOne({ id });
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
@@ -29,7 +29,7 @@ export class UsersService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    await this.usersRepository.delete(id);
   }
 
 }
